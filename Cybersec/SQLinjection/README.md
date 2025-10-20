@@ -8,4 +8,4 @@
 
 To solve the lab, perform a SQL injection attack that logs in to the application as the administrator user. 
 
-![alt text](<Screenshots/Lab1 Quiz.png>)
+![Lab 1 quiz](Screenshots/Lab1 Quiz.png)
