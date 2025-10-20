@@ -45,3 +45,22 @@ At the moment the lab displays only released products. We want to perform SQL in
 
 ## Solution
 To solve this lab, you can use burpsuit or you can just make changes in the address bar. For instance, if I select the Gift Category. Look at how my address bar is 
+
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2000-35-40.png?raw=true)
+
+I can just inject a query in the addressbar like this
+```
+category=Corporate gifts' OR 1=1--
+```
+This will result to an SQL query:
+```
+SELECT * FROM products WHERE category = 'Corporate gifts' OR 1=1--';
+```
+## What it does 
+
+Corporate gifts' — the extra ' closes the category text the app expected.
+
+OR 1=1 — this always returns true, so the filter matches every row.
+
+-- — makes the rest of the query a comment hence ignoring the released part. So all the products will be retrieved, irregardless of whether they are released or not
+
