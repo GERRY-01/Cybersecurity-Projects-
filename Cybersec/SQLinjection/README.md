@@ -36,7 +36,12 @@ This lab contains a SQL injection vulnerability in the product category filter. 
 SELECT * FROM products WHERE category = 'Gifts' AND released = 1
 ```
 To solve the lab, we need to perform a SQL injection attack that causes the application to display one or more unreleased products. 
+
 This is the lab 
+
 ![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-20%2023-55-06.png?raw=true)
 
 At the moment the lab displays only released products. We want to perform SQL injection so that it can dispaly all products irregardless of whether they are released or not
+
+## Solution
+To solve this lab, you can use burpsuit or you can just make changes in the address bar. For instance, if I select the Gift Category. Look at how my address bar is 
