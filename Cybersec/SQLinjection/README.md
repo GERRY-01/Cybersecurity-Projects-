@@ -8,4 +8,4 @@
 
 To solve the lab, perform a SQL injection attack that logs in to the application as the administrator user. 
 
-![Lab 1 quiz](Screenshots/Lab1 Quiz.png)
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Lab1%20Quiz.png?raw=true)
