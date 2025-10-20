@@ -27,3 +27,5 @@ OR '1'='1' — this part is always true (1 = 1). Because it’s joined with OR, 
 -- — this makes the rest of the SQL statement into a comment, so the password check is ignored.
 
 So the password check gets skipped and the database may return a user row (often the admin), letting you log in without the correct password.
+
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Lab1%20Solution.png?raw=true)
