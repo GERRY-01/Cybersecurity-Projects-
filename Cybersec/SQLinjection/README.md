@@ -3,7 +3,7 @@
 **Disclaimer:** These write-ups document challenges solved on intentionally vulnerable labs (PortSwigger Web Security Academy). Do **not** use these techniques on systems you do not own or have permission to test.
 
 
-## Lab 01 — Login bypass (error-based)
+## Lab 01 — Login bypass 
  This lab contains a SQL injection vulnerability in the login function.
 
 To solve the lab, perform a SQL injection attack that logs in to the application as the administrator user. 
@@ -29,3 +29,12 @@ OR '1'='1' — this part is always true (1 = 1). Because it’s joined with OR, 
 So the password check gets skipped and the database may return a user row (often the admin), letting you log in without the correct password.
 
 ![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Lab1%20Solution.png?raw=true)
+
+## Lab 02 - Retrieval of hidden data in a Database
+This lab contains a SQL injection vulnerability in the product category filter. When the user selects a category, the application carries out a SQL query like the following: 
+```
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+```
+To solve the lab, we need to perform a SQL injection attack that causes the application to display one or more unreleased products. 
+This is the lab 
+![image alt]()
