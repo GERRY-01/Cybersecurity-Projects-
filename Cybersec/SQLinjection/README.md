@@ -123,4 +123,6 @@ By doing this I was able to retreieve username and password of the administratot
 ![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-50-48.png?raw=true)
 
  I will just go to My account enter the username and Password and I have solved the lab
+
+ ![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-54-26.png?raw=true)
  
