@@ -95,4 +95,17 @@ Since UNION cn only be achieved when the number of columns of the first table co
 ## Step 2: Identifying the data type of each column
 This can be achieved by replacing each **NULL** by any string, if it throws an error, that means that column is not a string. If it doesn't throw an error, that means that the column is a string.
 Let's Start with the first one 
-### category=pets' UNION SELECT 'abc',NULL--   we replaced the first NULL with any string
+### category=pets' UNION SELECT 'abc',NULL--   
+we replaced the first NULL with any string
+
+we didn't get any error, meaning the first column accept the string data type
+
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-38-54.png?raw=true)
+
+let's try it with the second column
+### category=pets' UNION SELECT NULL, 'abc'--
+we replaced the second NULL with 'abc' to test if it can accept string data type
+
+
+
+No error, meaning column 2 also accept string
