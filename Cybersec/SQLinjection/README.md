@@ -73,6 +73,19 @@ OR 1=1 — this always returns true, so the filter matches every row.
 This lab requires as to retrieve data(usernames and passwords) from the **users** table. Since we have a vulnerability
 in the category filter, we can use union attack to combine the SQL query for the category filter and for users table. By doing this, all the usernames and passwords will be retrieved
 
-1. To perform UNION attack, first you need to know the number of columns in a table. UNION is simply combining 2 SELECT statements. In this case we are combining the categories table and the users table
+1. To perform UNION attack, first you need to know the number of columns in a table. UNION is simply combining 2 SELECT statements. In this case we are combining the categories table and the users table. One of the condition necessary to perform UNION attack is that, the first table should have the same number of columns as the second table
 2. Secondly, we need to know the data type of the various columns.
 3. We can now do the UNION attack
+
+This is the lab when you access it
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-21-44.png?raw=true)
+
+## Step 1: Identifying the number of columns in the category table
+we can achieve this by injecting this payload 
+## category=pets' UNION SELECT NULL--
+At first you may get an error.
+Since UNION cn only be achieved when the number of columns of the first table corresponds with the number of columns in the second table, we will keep on incrementing "NULL" till we get no error ie
+
+## category=pets' UNION SELECT NULL,NULL--
+
+
