@@ -64,3 +64,6 @@ OR 1=1 — this always returns true, so the filter matches every row.
 
 -- — makes the rest of the query a comment hence ignoring the released part. So all the products will be retrieved, irregardless of whether they are released or not
 
+
+## Lab 03 - SQL injection UNION attack to retrieve data from other tables
+
