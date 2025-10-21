@@ -68,3 +68,11 @@ OR 1=1 — this always returns true, so the filter matches every row.
 ## Lab 03 - SQL injection UNION attack to retrieve data from other tables
 
 ![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-09-06.png?raw=true)
+
+## Solution
+This lab requires as to retrieve data(usernames and passwords) from the **users** table. Since we have a vulnerability
+in the category filter, we can use union attack to combine the SQL query for the category filter and for users table. By doing this, all the usernames and passwords will be retrieved
+
+1. To perform UNION attack, first you need to know the number of columns in a table. UNION is simply combining 2 SELECT statements. In this case we are combining the categories table and the users table
+2. Secondly, we need to know the data type of the various columns.
+3. We can now do the UNION attack
