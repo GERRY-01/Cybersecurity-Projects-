@@ -67,3 +67,4 @@ OR 1=1 — this always returns true, so the filter matches every row.
 
 ## Lab 03 - SQL injection UNION attack to retrieve data from other tables
 
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-09-06.png?raw=true)
