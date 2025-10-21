@@ -88,4 +88,11 @@ Since UNION cn only be achieved when the number of columns of the first table co
 
 ## category=pets' UNION SELECT NULL,NULL--
 
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-31-33.png?raw=true)
 
+ we got no error, which means the category table has 2 columns.
+
+## Step 2: Identifying the data type of each column
+This can be achieved by replacing each **NULL** by any string, if it throws an error, that means that column is not a string. If it doesn't throw an error, that means that the column is a string.
+Let's Start with the first one 
+### category=pets' UNION SELECT 'abc',NULL--   we replaced the first NULL with any string
