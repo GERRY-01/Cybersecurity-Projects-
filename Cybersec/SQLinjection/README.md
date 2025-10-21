@@ -106,6 +106,16 @@ let's try it with the second column
 ### category=pets' UNION SELECT NULL, 'abc'--
 we replaced the second NULL with 'abc' to test if it can accept string data type
 
-
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-43-19.png?raw=true)
 
 No error, meaning column 2 also accept string
+
+## step 3: Doing the UNION attack
+Now that we know the number of columns and the data types. We can actually do the union attack. We want to get all the usernames and passwords from the user table. We can only achieve this by injecting a payload that will return them. SO we'll do UNION attack
+
+This is the **payload** 
+
+```
+category=pets' UNION SELECT,username,password FROM users--
+```
+By doing this I was able to retreieve username and password of the administratot. So I can now login as the admin
