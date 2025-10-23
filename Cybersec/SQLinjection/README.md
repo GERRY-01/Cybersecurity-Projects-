@@ -179,15 +179,19 @@ TrackingId=xyz' AND '1'='2
 The condition is false, so no welcome message
 
 3. Checking if the users table exist. You will run this command
+   
    ```
    TrackingId=xyz' AND SELECT 'a' FROM users LIMIT 1= 'a
   ```
+
 if the users table exist, then it should select 'a'. Since a=a, the condition will be true hence you will see the welcome message. If it doesn't exist, the condition will be false and you won't see the welcome message
 
 4. Check if the username administrator exists in the database. Run this command
+
 ```
  TrackingId=xyz' AND SELECT 'a' FROM users WHERE username='administrator' ='a
  ```
+
 If the administrator exists, it will select 'a'. Since a=a, the condition will be true and it will return the welcom message. If it doesnn't exist, the condition will be false and there will be no welcome message
 
 5. After knowing that the administrator exist, we now need to find its password. First of all, we need to know the length of the password. We can do that by injecting this
