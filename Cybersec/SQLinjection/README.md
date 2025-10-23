@@ -125,4 +125,32 @@ By doing this I was able to retreieve username and password of the administratot
  I will just go to My account enter the username and Password and I have solved the lab
 
  ![image alt](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/SQLinjection/Screenshot%20from%202025-10-21%2015-54-26.png?raw=true)
+
+ ## Blind SQL injection
+ Blind SQL injection occurs when an application is vulnerable to SQL injection, but its HTTP responses do not contain the results of the relevant SQL query or the details of any database errors.
+
+ ## Exploiting blind SQL injection by triggering conditional responses
+ ### Scenario
+ Consider an application that uses a TrackingId cookie to identify users
+ The resulting SQL query is:
+ ```
+SELECT TrackingId FROM TrackedUsers WHERE TrackingId = 'xyz'
+```
+This query is vulnerable to SQL injection. Although the query result isn’t shown to the user, the app does behave differently depending on whether the query returns data — e.g., showing a "Welcome back" message for valid IDs.
  
+##  Exploitation Strategy
+
+By injecting conditions into the TrackingId value, attackers can infer true/false outcomes based on the presence or absence of the "Welcome back" message.
+
+### Example
+```
+TrackingId=xyz' AND '1'='1
+```
+→ Condition is true → "Welcome back" appears
+
+```
+TrackingId=xyz' AND '1'='2
+```
+→ Condition is false → No message
+
+This confirms that the app’s response reflects the result of the injected condition.
