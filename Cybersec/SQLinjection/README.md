@@ -212,9 +212,11 @@ Then we move to the second character
 
 ```
 TrackingId=xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username='Administrator'), 2, 1) = 'a
+```
 we try all possible characters from a to z until we find a match
 
-we do the same for all the 20 characters. This process is tiresome. You can use burpsuit intruder to make your work easier
+we do the same for all the 20 characters. This process is tiresome. You can use burpsuit intruder to make your work easier.
+For more information you can read on https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses
 
 
 
