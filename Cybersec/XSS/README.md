@@ -18,3 +18,11 @@ Cross-Site Scripting/ XSS is a type of web security vulnerability that allows at
 2. But in new versions of Chrome, alert() doesn’t work in some special cases (like when a page is inside another site).
 
 3. So now, you can use print() instead to test it.
+
+## Types of XSS attacks
+1. Reflected XSS - where the malicious script comes from the current HTTP request.
+
+**Example**
+This lab contains a simple reflected cross-site scripting vulnerability in the search functionality.
+
+To solve the lab, perform a cross-site scripting attack that calls the alert function.
