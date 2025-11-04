@@ -28,3 +28,8 @@ This lab contains a simple reflected cross-site scripting vulnerability in the s
 To solve the lab, perform a cross-site scripting attack that calls the alert function.
 
 ![alt text](lab1.png)
+
+## Steps I used in solving the lab
+1. When you try searching for something in the address bar you will see some raw text. Something like this **search=whatever you searched**
+2. To solve the lab you can just inject a javascript code in that url ie **<script>alert("hello")</script>**
+3. It will return the alert message meaning that it's vulnerbale to xss
