@@ -27,4 +27,4 @@ This lab contains a simple reflected cross-site scripting vulnerability in the s
 
 To solve the lab, perform a cross-site scripting attack that calls the alert function.
 
-![alt text](/home/gerry/Cybersecurity-Projects-/Cybersec/XSS/lab1.png)
+![alt text](lab1.png)
