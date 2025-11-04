@@ -26,3 +26,5 @@ Cross-Site Scripting/ XSS is a type of web security vulnerability that allows at
 This lab contains a simple reflected cross-site scripting vulnerability in the search functionality.
 
 To solve the lab, perform a cross-site scripting attack that calls the alert function.
+
+![alt text](/home/gerry/Cybersecurity-Projects-/Cybersec/XSS/lab1.png)
