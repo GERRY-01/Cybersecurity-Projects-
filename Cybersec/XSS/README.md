@@ -20,7 +20,7 @@ Cross-Site Scripting/ XSS is a type of web security vulnerability that allows at
 3. So now, you can use print() instead to test it.
 
 ## Types of XSS attacks
-1. Reflected XSS - where the malicious script comes from the current HTTP request.
+1. **Reflected XSS** - where the malicious script comes from the current HTTP request.
 
 **Example**
 This lab contains a simple reflected cross-site scripting vulnerability in the search functionality.
@@ -30,6 +30,19 @@ To solve the lab, perform a cross-site scripting attack that calls the alert fun
 ![alt text](lab1.png)
 
 ## Steps I used in solving the lab
-1. When you try searching for something in the address bar you will see some raw text. Something like this **search=whatever you searched**
+1. When you try searching for something in that search input, you will see some raw text in the address bar. Something like this **search=whatever you searched**
 2. To solve the lab you can just inject a javascript code in that url ie **<script>alert("hello")</script>**
 3. It will return the alert message meaning that it's vulnerbale to xss
+
+2. **Stored XSS** - malicious script comes from the website's database.
+
+### I have a lab here demonstrating stored xss
+This lab contains a stored cross-site scripting vulnerability in the comment functionality.
+To solve this lab, submit a comment that calls the alert function when the blog post is viewed.
+
+![alt text](lab2.png)
+
+So you can see in this lab I am expected to submit a comment that will call the alaert function. Since it will be stored in a database, anyone visiting that post will see that alert message
+
+## How I solved the lab
+I injected this script in the comment section **<p><script>alert("hello")</script></p>**
