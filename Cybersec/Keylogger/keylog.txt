@@ -1,0 +1,11 @@
+Key.ctrl
+c
+Key.enter
+Key.caps_lock
+m
+Key.caps_lock
+i
+k
+e
+Key.ctrl
+c
