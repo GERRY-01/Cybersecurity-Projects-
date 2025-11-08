@@ -63,5 +63,7 @@ ettercap: The tool being used.
 
 By running that command, you will start capturing traffic for that device
 
+![alt text](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/Packet_sniffing/ettercat.png?raw=true)
+
 3. Open Wireshark
 After opening wireshark you can just filter traffic by ip address
