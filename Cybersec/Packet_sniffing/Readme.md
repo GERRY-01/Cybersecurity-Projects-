@@ -39,7 +39,7 @@ sudo nmap -sn 192.168.1.0/24
 ```
 This will return all devices connected in the network and I can choose the one I want to attack
 
-![alt text](nmapscan.png)
+![alt text](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/Packet_sniffing/nmapsnan.png?raw=true)
 
 2. I'll run this command to start the attack 
 ```
