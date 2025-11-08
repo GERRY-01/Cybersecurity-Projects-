@@ -67,3 +67,4 @@ By running that command, you will start capturing traffic for that device
 
 3. Open Wireshark
 After opening wireshark you can just filter traffic by ip address
+![alt text](https://github.com/GERRY-01/Cybersecurity-Projects-/blob/main/Cybersec/Packet_sniffing/wireshark.png?raw=true)
